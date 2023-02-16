@@ -1,72 +1,28 @@
-# DevOps Challenge Demo Code:
+# ITI-DevOps-Final-Project-Application
 
-This application will be used as a demo for DevOps Challenges.
+## CI/CD Pipeline To Deploy the application
+![home_Page Image](./screenshot/pipeline_2.png)
 
-You should fork/clone this repository to use as a basis for the challenge.
+### Create credintials in Jenkins:
 
-## Demo application
+* Dockerhub credintials
+* Key file of the new service account
 
-### Requirements
+### 1- Continuous Integration pipeline (CI):
 
-#### System
+![home_Page Image](./screenshot/CI.png)
 
-- GNU/Linux
-- `python` >= 3.7
-- `pip` >= 9.0
-- `redis` >= 5.0
+### 2- Continuous Deployment pipeline (CD):
 
-`>=` means any version of the package, above or equal to the specified version.
+![home_Page Image](./screenshot/CD.png)
 
-#### Application
+### 3- Trigger WebHook to Deploy with any push on github :
 
-- `redis-py`
-- `tornado`
+![home_Page Image](./screenshot/triger.png)
 
-You can find them in the `requirements.txt` file and their required version number.
-You can install them by using:
+![home_Page Image](./screenshot/triger2.png)
 
-```bash
-pip install -r requirements.txt
-```
+## The application backend
 
-### :rocket: Starting the Application
-
-The application uses several environment variables.
-You can find them all and their default values in the `.env` file. They need to be avaiable at runtime. Here is an overview about the environment variables:
-
-- `ENVIRONMENT` the environment in which the application is run. Likely `PROD` for production or `DEV` for development context.
-- `HOST` the hostname on which the application is running. Locally it is `localhost`.
-- `PORT` is the port on which the application is running.
-- `REDIS_HOST` is the hostname on which redis is running. Locally it is `localhost`.
-- `REDIS_PORT` is the port on which to communicate with redis. Normally it is `6379`.
-- `REDIS_DB` which redis db should be used. Normally it is `0`.
-
-Application can be found in `hello.py` file. You can start the application by using:
-
-```bash
-export $(cat .env | xargs) && python hello.py
-```
-
-Although you don't have to export the environment variables that way. :wink:
-
-### Static files
-
-- Static files are located in `static/` folder.
-- Templates are located in `template/` folder.
-
-### Executing Tests
-
-Tests can be found in `tests/test.py` file.
-You can run the tests by using:
-
-```bash
-python tests/test.py
-```
-
-## License
-
-Copyright (c) 2019 by the Tradebyte Software GmbH.<br/>
-`DevOps-Challenge` is free software, and may be redistributed under the terms specified in the [LICENSE] file.
-
-[license]: /LICENSE
+![home_Page Image](./screenshot/app.png)
 
